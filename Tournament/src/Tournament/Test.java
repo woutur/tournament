@@ -13,19 +13,23 @@ public class Test {
 
 	public static void menu() {
 		Scanner in = new Scanner(System.in);
-		// print menu
-		System.out.println("1. Go to the Tournament menu");
-		System.out.println("2. Go to the Team menu");
-		System.out.println("3. Go the Player menu");
-		System.out.println("4. Doesn't do anything yet");
-		System.out.println("5. Doesn't do anthing yet");
-		System.out.println("0. Quit");
+		
 		// handle user commands
 		boolean quit = false;
 		int menuItem;
 		do {
+			// print menu
+			System.out.println("1. Go to the Tournament menu");
+			System.out.println("2. Go to the Team menu");
+			System.out.println("3. Go the Player menu");
+			System.out.println("4. Doesn't do anything yet");
+			System.out.println("5. Doesn't do anthing yet");
+			System.out.println("0. Quit");
 			System.out.print("Choose menu item: ");
 			menuItem = in.nextInt();
+			for (int i = 0; i <40;i++) {
+				System.out.println("\n");
+				}
 			switch (menuItem) {
 			case 1:				
 //				Scanner inTour = new Scanner(System.in);
