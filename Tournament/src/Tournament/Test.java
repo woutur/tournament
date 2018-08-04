@@ -10,53 +10,39 @@ public class Test {
 	String tournament;
 	String bracket;
 	String game;
+	String UUID = null;
 
-	public static void menu() {
+	public void menu() {
 		Scanner in = new Scanner(System.in);
 		
 		// handle user commands
 		boolean quit = false;
 		int menuItem;
 		do {
+			for (int i = 0; i <40;i++) {
+				System.out.println("\n");
+				}
+			
 			// print menu
+			if (this.UUID != null) {
+				System.out.println("There is an UUID: " + UUID);
+			}
+			if (this.team != null) {
+				System.out.println("Current Teamname: " + team);
+			}
 			System.out.println("1. Go to the Tournament menu");
 			System.out.println("2. Go to the Team menu");
 			System.out.println("3. Go the Player menu");
-			System.out.println("4. Doesn't do anything yet");
+			System.out.println("4. Test ID");
 			System.out.println("5. Doesn't do anthing yet");
 			System.out.println("0. Quit");
 			System.out.print("Choose menu item: ");
 			menuItem = in.nextInt();
-			for (int i = 0; i <40;i++) {
-				System.out.println("\n");
-				}
+		
 			switch (menuItem) {
 			case 1:				
-//				Scanner inTour = new Scanner(System.in);
-//				do {
-//					System.out.print("Choose menu item: ");
-//					menuItem = inTour.nextInt();
-//					switch (menuItem) {
-//				// print menu
-//				System.out.println("1. Create new Tournament");
-//				System.out.println("2. Set Tournament type");
-//				System.out.println("3. Set number of rounds");
-//				System.out.println("4. Set number of teams");
-//				System.out.println("0. Back to the main menu");
-//				case 11:
-				
-					
-//				case 0:
-//					quit = true;
-//					break;
-//					
-//				default:
-//					System.out.println("Invalid choice.");
-//					}
-//				} while (!quit);
-//				System.out.println("Back to the main menu");
-//				// 
-//				// do something...
+				MenuTournament menutournament = new MenuTournament();
+				menutournament.menu();
 				break;
 			
 			case 2:
@@ -69,6 +55,9 @@ public class Test {
 				// do something...
 				break;
 			case 4:
+				GenerateUUID testID = new GenerateUUID();
+				this.UUID = testID.generateID();
+				System.out.println(UUID);
 				
 				// do something...
 				break;
@@ -83,7 +72,7 @@ public class Test {
 				System.out.println("Invalid choice.");
 			}
 		} while (!quit);
-		System.out.println("Bye-bye!");
+		System.out.println("Thanks for using this program!");
 		
 		}	
 	}

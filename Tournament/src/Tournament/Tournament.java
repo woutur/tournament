@@ -13,18 +13,18 @@ public class Tournament {
 	private static int tournamentCounter;
 	private int tournamentCounterID;
 
-	public Tournament(int type, int rounds, int numOfTeams, String name) {
-		this.tournamentType = type;
-		this.numOfRounds = rounds;
+	public Tournament(int tournamentType, int numOfRounds, int numOfTeams, String name) {
+		this.tournamentType = tournamentType;
+		this.numOfRounds = numOfRounds;
 		this.numOfTeams = numOfTeams;
 		this.name = name;
 		tournamentCounter++;		
-		this tournamentCounterID = tournamentCounter;
+		this.tournamentCounterID = this.tournamentCounter;
 		GenerateUUID tournamentID = new GenerateUUID();
 		this.tournamentID = tournamentID.generateID();
 		this.createBracket();
 		System.out.println("Tournament name: " + name);
-		System.out.println("Tournament type: " + type);
+		System.out.println("Tournament type: " + tournamentType);
 		System.out.println("Tournament number of rounds: " + numOfRounds);	
 		System.out.println("Tournament number of teams: " + numOfTeams);
 		System.out.println("Tournament sport: " + sportsType);
@@ -32,9 +32,15 @@ public class Tournament {
 		System.out.println("Tournament UUID: " + tournamentID);
 		System.out.println("Tournament ID: " + name);
 		}
-	public String createBracket(){ 
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void createBracket(){ 
 		GenerateUUID bracketID = new GenerateUUID();
 		this.bracketID = bracketID.generateID();
-		Bracket bracket = new Bracket(this.numOfRounds, this.numOfTeams, this.bracketID);
+		//Bracket bracket = new Bracket(this.bracketID, this.numOfTeams, this.numOfRounds);
 		}
 	}

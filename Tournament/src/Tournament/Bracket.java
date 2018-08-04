@@ -4,17 +4,17 @@ public class Bracket {
 	private String bracketName;
 	private int numOfTeams;
 	private String bracketID;
-	private int roundNum;
+	private int numOfRounds;
 	// comment
 	
-	Bracket(String bracketID, int numOfTeams, int roundNum) {
+	Bracket(String bracketID, int numOfTeams, int numOfRounds) {
 		this.numOfTeams = numOfTeams;
 		this.bracketID = bracketID;
-		this.roundNum = roundNum;
+		this.numOfRounds = numOfRounds;
 		}
 	
 	public boolean buildBracket(int numOfTeams) {
-		ArrayList String bracket = new Array[numOfTeams[]; /*even uitzoeken hoe arrays */
+		// ArrayList String bracket = new Array[numOfTeams[]; /*even uitzoeken hoe arrays */
 		}
 	public int getNumOfTeams() {
 		return numOfTeams;
@@ -29,10 +29,10 @@ public class Bracket {
 		this.bracketID = bracketID;
 	}
 	public int getRoundNum() {
-		return roundNum;
+		return numOfRounds;
 	}
-	public void setRoundNum(int roundNum) {
-		this.roundNum = roundNum;
+	public void setRoundNum(int numOfRounds) {
+		this.numOfRounds = numOfRounds;
 	}
 	
 

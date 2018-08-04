@@ -1,6 +1,5 @@
 package Tournament;
 
-//Testclass om alle klassen eens te initialiseren. 
 import java.util.*;
 
 public class MenuTeam {
@@ -11,9 +10,15 @@ public class MenuTeam {
 	String bracket;
 	String game;
 
-	public static void menu() {
+	public void menu() {
 		Scanner in = new Scanner(System.in);
 		// print menu
+		for (int i = 0; i <40;i++) {
+			System.out.println("\n");
+			}
+		if (team != null) {
+			System.out.println("Current Teamname: " + team);
+		}
 		System.out.println("1. Set team name");
 		System.out.println("2. Add player to team ");
 		System.out.println("3. Print teams");
@@ -32,6 +37,7 @@ public class MenuTeam {
 				// add code to set a team name calling team.
 				teamName = in.next();
 				Team team = new Team(teamName);
+				this.team = team.getTeamName();		
 				break;
 			
 			case 2:

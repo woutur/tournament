@@ -18,6 +18,7 @@ public class Team {
 		tournaments.add(tournamentID);
 		teams.add(this);
 		System.out.println("[Team]: " + teamName);
+		System.out.println("TournamentID: " + tournamentID);
 		}
 	public String getTeamName() {
 		return teamName;
