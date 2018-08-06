@@ -30,7 +30,6 @@ public class Tournament {
 		System.out.println("Tournament sport: " + sportsType);
 		System.out.println("Tournament readable ID: " + tournamentCounterID);
 		System.out.println("Tournament UUID: " + tournamentID);
-		System.out.println("Tournament ID: " + name);
 		}
 	public String getName() {
 		return name;
@@ -38,6 +37,8 @@ public class Tournament {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public 
+	
 	public void createBracket(){ 
 		GenerateUUID bracketID = new GenerateUUID();
 		this.bracketID = bracketID.generateID();

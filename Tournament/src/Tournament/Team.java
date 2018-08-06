@@ -1,6 +1,6 @@
 package Tournament;
 import java.util.*;
-
+import java.util.concurrent.TimeUnit;
 public class Team {
 	private String teamName;
 	ArrayList<Integer> tournaments = new ArrayList<Integer>();
@@ -36,5 +36,11 @@ public class Team {
 		}
 	public static void printTeams() {
 		System.out.print(teams);
+		try {
+		    Thread.sleep(2000);
+		} 
+		catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+			}
 		}
 }

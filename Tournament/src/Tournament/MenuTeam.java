@@ -13,7 +13,7 @@ public class MenuTeam {
 	public void menu() {
 		Scanner in = new Scanner(System.in);
 		// print menu
-		for (int i = 0; i <40;i++) {
+		for (int i = 0; i <10;i++) {
 			System.out.println("\n");
 			}
 		if (team != null) {
@@ -25,6 +25,7 @@ public class MenuTeam {
 		System.out.println("4. Doesn't do anything yet");
 		System.out.println("5. Doesn't do anthing yet");
 		System.out.println("0. Exit to main menu");
+		
 		// handle user commands
 		boolean quit = false;
 		int menuItem;
@@ -45,8 +46,7 @@ public class MenuTeam {
 				// do something...
 				break;
 			case 3:
-				// System.out.println(team.printTeams());
-				// do something...
+				Team.printTeams();
 				break;
 			case 4:
 				

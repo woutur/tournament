@@ -62,8 +62,10 @@ public class Test {
 				// do something...
 				break;
 			case 5:
-				
-				// do something...
+				Team.printTeams();
+//				teamNameInput = in.next();
+//				System.out.println(teamNameInput.getTeamName());
+			
 				break;
 			case 0:
 				quit = true;
